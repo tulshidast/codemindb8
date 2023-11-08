@@ -12,7 +12,7 @@ public class LaunchBrowser {
 
 		// WebDriver driver = new EdgeDriver();
 
-		driver.get("https://www.google.com/");
+		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		driver.manage().window().minimize();
 		driver.manage().window().maximize();

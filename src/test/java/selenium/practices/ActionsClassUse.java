@@ -15,6 +15,7 @@ public class ActionsClassUse {
 
 		WebDriver driver = new EdgeDriver();
 
+		// this is used to launch url
 		driver.get(Utilities.readProperty("url"));
 
 		driver.manage().window().maximize();
