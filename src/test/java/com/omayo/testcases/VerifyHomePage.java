@@ -25,6 +25,7 @@ public class VerifyHomePage {
 	public void lanchBrowser() {
 		driver = Utilities.launchApplication(Utilities.readProperty("url"));
 		homePage = new HomePage(driver);
+		System.out.println("Changes");
 	}
 
 	@Test
