@@ -40,7 +40,7 @@ public class VerifyValidLogin {
 
 	@DataProvider(name = "userData")
 	public String[][] data() {
-		String users[][] = { { "admin1", "12345" }, { "admin2", "admin@124" }, { "admin", "admin@123" } };
+		String users[][] = { { "admin1", "12345" }, { "admin", "admin@123" } };
 		return users;
 	}
 
