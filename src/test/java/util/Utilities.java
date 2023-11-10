@@ -74,6 +74,34 @@ public class Utilities {
 				}
 
 			}
+			xssfWorkbook.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return userData;
+	}
+
+	public static ArrayList<String> readExcel(int rowIndex) {
+
+		ArrayList<String> userData = new ArrayList<String>();
+
+		try {
+			File file = new File("src/test/resources/testdata.xlsx");
+			FileInputStream fis = new FileInputStream(file);
+
+			XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fis);
+
+			XSSFSheet xssfSheet = xssfWorkbook.getSheet("data");
+
+			XSSFRow row = xssfSheet.getRow(rowIndex);
+
+			int lastCellNum = row.getLastCellNum();
+
+			for (int j = 0; j < lastCellNum; j++) {
+				userData.add(row.getCell(j).getStringCellValue());
+			}
+			xssfWorkbook.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
